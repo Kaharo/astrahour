@@ -1,0 +1,30 @@
+#chart {
+  height: 90%;
+  width: 100%;
+  margin: 0 auto;
+}
+#visualization {
+  height: 100vh;
+}
+
+/*body {	*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*  background: rgb(230,230,230);*/
+  
+/*  color: rgb(50,50,50);*/
+/*  font-family: 'Open Sans', sans-serif;*/
+/*  font-size: 112.5%;*/
+/*  line-height: 1.6em;*/
+/*}*/
+
+#control {
+  /*background-color: #ED000A;*/
+  background-color: #e74c3c;
+  color: #fefefe;
+}
+
+#detail {
+  background-color: #34495e;
+  color: #fefefe;
+}
