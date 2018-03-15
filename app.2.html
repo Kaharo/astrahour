@@ -6,11 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css">
-  <link rel="stylesheet" href="https://cdn.osmbuildings.org/mapbox-gl/0.43.0/mapbox-gl.css">
-  <link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css">
   <link rel="stylesheet" href="css/app.css">
-  
   
   <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
   <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
@@ -18,10 +14,6 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-  <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
-  <script src="https://cdn.osmbuildings.org/mapbox-gl/0.43.0/mapbox-gl.js"></script>
-  <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js"></script>
 
   <script src="https://code.highcharts.com/highcharts.js"></script>
   <script src="https://code.highcharts.com/modules/exporting.js"></script>
@@ -34,11 +26,11 @@
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#dashboard" class="page_link">Dashboard</a>
-  <a href="#map" id="mapButton" class="page_link">Map</a>
-  <a href="#chart-page" class="page_link">Chart</a>
-  <!--<a href="#settings" class="page_link">Settings</a>-->
-  <a href="#contacts" class="page_link">Contact</a>
+  <a href="#dashboard">Dashboard</a>
+  <a href="#map">Map</a>
+  <a href="#chart-page">Chart</a>
+  <a href="#">Settings</a>
+  <a href="#">Contact</a>
 </div>
 
 <!-- Use any element to open the sidenav -->
@@ -48,39 +40,44 @@
 <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 <div id="main">
 
-  <div class="container-fluid">
-    <div class="row fill text-center pages" id="dashboard">
-      <div class="fill text-center">
-        <h2>Тестовые Данные для 17 маршрута</h2>
-        <a href="#" class="text-center"><img class="img-thumbnail" src="img/scheme-route17.jpg"/></a>  
-      </div>
-    </div>
-    <div class="row pages text-center d-none" id="map">
-      <!--<h2>Карта с отображением маршрута и остановок</h2>-->
-      <!--<div class="fill" id="map">-->
-        
-      <!--</div>-->
-      
-    </div>
-    <div class="row pages text-center d-none" id="chart-page">
-        <!--<h2>20 маршрут (part)</h2>        -->
-        <h2>17 маршрут (часть)</h2>
-        <div class="row" id="chart">
-          <div class="col-md-auto" id="chart">
-          </div>
-        </div>
-    </div>
-    <div class="row pages d-none" id="contacts">
-      <div class="section">
-        <div class="top-border left"></div>
-        <div class="top-border right"></div>
-        <h1>CONTACT US</h1>
-        <p>We are VizzLab and we want to make a difference in city data vissualization throghout the map</p>
-        <a href="mailto: k.bazaraly@gmail.com">CONTACT US</a>
-      </div>
-    </div>
+<div class="container-fluid fill">
+  <div class="row text-center" id="dashboard">
     
-    <div>  
+  </div>
+  <div class="row text-center" id="chart-page">
+    <!--<div class="col-md-2" id="control">-->
+    <!--  <h5>Route</h5>-->
+    <!--  TODO: something optional -->
+    <!--  <h1>17</h1>     -->
+      
+    <!--  <div class="form-group row">-->
+    <!--    <label for="example-date-input" class="col-2 col-form-label">Date</label>-->
+    <!--    <div class="col-10">-->
+    <!--      <input class="form-control" type="date" value="2018-01-29" id="example-date-input">-->
+    <!--    </div>-->
+    <!--  </div> -->
+     
+    <!--  <div class="calendar-wrapper">-->
+    <!--    <button id="btnPrev" type="button">Prev</button>-->
+    <!--  	  <button id="btnNext" type="button">Next</button>-->
+    <!--    <div id="divCal"></div>-->
+    <!--  </div>-->
+    <!--</div>-->
+    
+    <!--<div class="col-md-10" id = "visualization">-->
+      <h2 class="text-center">The 17 route data distributed by one round</h2>
+      <div class="row" id="chart">
+        <div class="col-md-auto" id="chart">
+        </div>
+      </div>
+    <!--</div>-->
+    
+    <!--<div class="col-md-3" id="detail">-->
+    <!-- <h4>detail</h4>-->
+    <!--</div>-->
+  </div>
+  <div>
+    
   </div>
 </div>
 </div>
